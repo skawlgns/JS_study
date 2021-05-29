@@ -14,16 +14,16 @@ document.body.append(Result);
 
 
 
-Form.addEventListener('submit', function CallBack (Event) {
+Form.addEventListener('submit', function CallBack(Event) {
     Event.preventDefault(); //새로고침 방지
-    if(Word.textContent[Word.textContent.length -1]=== InputBar.value[0]){
+    if (Word.textContent[Word.textContent.length - 1] === InputBar.value[0]) {
         Result.textContent = '정답!';
         Word.textContent = InputBar.value;
-        InputBar.value =''; // 빈값
+        InputBar.value = ''; // 빈값
         InputBar.focus(); //커서 고정
     } else {
         Result.textContent = '땡!';
-        InputBar.value ='';
-        InputBar.focus(); 
+        InputBar.value = '';
+        InputBar.focus();
     }
 });

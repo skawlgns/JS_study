@@ -1,5 +1,5 @@
-var 숫자1 = Math.ceil(Math.random()*9);
-var 숫자2 = Math.ceil(Math.random()*9);
+var 숫자1 = Math.ceil(Math.random() * 9);
+var 숫자2 = Math.ceil(Math.random() * 9);
 var 합 = 숫자1 * 숫자2;
 
 var 바디 = document.body;
@@ -19,22 +19,22 @@ var 결과 = document.createElement('div');
 
 
 
-폼.addEventListener('submit', function(e) {
+폼.addEventListener('submit', function (e) {
     e.preventDefault();
-        if(합 === Number(입력.value)){
+    if (합 === Number(입력.value)) {
         결과.textContent = '정답!';
-        숫자1 = Math.ceil(Math.random()*9);
-        숫자2 = Math.ceil(Math.random()*9);
+        숫자1 = Math.ceil(Math.random() * 9);
+        숫자2 = Math.ceil(Math.random() * 9);
         합 = 숫자1 * 숫자2;
         단어.textContent = String(숫자1) + ' X ' + String(숫자2) + '는?';
         입력.value = '';
         입력.focus();
-    } else{
+    } else {
         결과.textContent = '땡!';
         입력.value = '';
         입력.focus();
     }
-   
+
 
 });
 
