@@ -3,7 +3,7 @@
 
 //1. async
 
-async function fetchUser(){
+async function fetchUser() {
     //do network request in 10 secs...
     return 'ellie';
 }
@@ -14,25 +14,25 @@ console.log(user);
 
 //2. await
 
-function delay(ms){
-    return new Promise(resolve => setTimeout(resolve,ms));
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function getApple(){
+async function getApple() {
     await delay(2000);
     return '🍎';
 }
 
-async function getBanana(){
+async function getBanana() {
     await delay(1000)
     return '🍌';
 }
 
-async function pickFruits(){
-   const applePromise = getApple();
-   const bananaPromise = getBanana();
-   apple = await applePromise;
-   banana = await bananaPromise;
+async function pickFruits() {
+    const applePromise = getApple();
+    const bananaPromise = getBanana();
+    apple = await applePromise;
+    banana = await bananaPromise;
     return `${apple} + ${banana}`;
 }
 
@@ -40,13 +40,13 @@ pickFruits().then(console.log);
 
 
 //3. useFul APIs
-function pickAllFruits(){
+function pickAllFruits() {
     return Promise.all([getApple(), getBanana()]).then(fruits =>
         fruits.join(' + '));
 }
 pickAllFruits().then(console.log);
 
-function pickOnlyOne(){
+function pickOnlyOne() {
     return Promise.race([getApple(), getBanana()]);
 }
 
