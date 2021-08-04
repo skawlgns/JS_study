@@ -1,0 +1,6 @@
+Array( a * b ).fill().map((arr,i) => {
+       return i
+});
+
+
+-> arr은 값, i는 인덱스(순서)

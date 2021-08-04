@@ -1,0 +1,32 @@
+function test(){
+  let result = '';
+  if (a){
+    if(!b){
+      result = 'c';
+    }
+  }else{
+    result ='a';
+  }
+  result += 'b';
+  return result;
+}
+
+1. 공통된 절차는 각 if문 바로 뒤 구문에 넣는다. (첫 if문은 else문 안에 넣음)
+2. if문과 else문 중 짧은 것을 골라 else가 짧으면 그 문장을 첫 if에 넣음
+   else가 짧으면 if조건문에 !를 넣음
+3. else를 제거하고 안에 있는 if문을 밖으로 뺀다.
+
+function test(){
+  let result = '';
+  if (!a){
+    result ='a';
+    result += 'b';
+    return result;
+  }
+  if(!b){
+    result = 'c';
+  }
+result += 'b';
+return result;
+  
+}
